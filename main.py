@@ -1,6 +1,7 @@
 import yagmail
 import os
 import time
+from datetime import datetime as dt
 
 # define variables to pass to yagmail
 sender = 'mhellnerdev@gmail.com'
@@ -16,7 +17,16 @@ def send_mail():
   yag.send(to=receiver, subject=subject, contents=contents)
 
 # loop to send mail on an interval of 60 seconds
+# while True:
+#   send_mail()
+#   print('Email Sent!')
+#   time.sleep(60)
+
+
+# send email at a specific hour and minute every 24 hours
 while True:
-  send_mail()
-  print('Email Sent!')
-  time.sleep(60)
+  now = dt.now()
+  if now.hour == 2 and now.minute == 43:
+    send_mail()
+    print('Email Sent!')
+    time.sleep(60)
