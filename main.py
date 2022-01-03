@@ -4,8 +4,8 @@ import time
 from datetime import datetime as dt
 
 # define variables to pass to yagmail
-sender = 'mhellnerdev@gmail.com'
-receiver = 'bopaja3109@wiicheat.com'
+sender = 'asdf@asdf.com'
+receiver = 'asdf@asdf.com'
 subject = "This is the subject"
 contents = "Here is a test email contents."
 
